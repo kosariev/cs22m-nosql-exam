@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "c3273f9b-a009-41d4-acec-43f3425ced86",
+		"name": "kosariev.cs22m.nosql.exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23889886"
+	},
+	"item": [
+		{
+			"name": "Get all universities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/universities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"universities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get university by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/university/646b584dce92e905203f8db1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"university",
+						"646b584dce92e905203f8db1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new university",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"ДУАН\",\n    \"name\": \"Університет імені Альфреда Нобеля\",\n    \"description\": \"З освітою переможемо!\",\n    \"founded\": 1993,\n    \"rector\": \"С. Б. Холод\",\n    \"country\": \"Україна\",\n    \"address\": \"вул.Січеславська Набережна, 18, Дніпро, Україна, 49000\",\n    \"phone\": \"+380 (67) 626-25-52\",\n    \"email\": \"abit@duan.edu.ua\",\n    \"website\": \"https://duan.edu.ua/\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/university",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"university"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
